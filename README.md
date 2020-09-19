@@ -25,7 +25,8 @@ This script will regenerate a new project, clean and rebuild the container.
 2. Execute:  
 
     ```sh
-    $ sh remake_project.sh <project_name>
+    $ chmod +x remake_project.sh
+    $ sudo ./remake_project.sh <project_name>
     ```
 
 ### Production

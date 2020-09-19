@@ -1,8 +1,7 @@
 #!/bin/sh
 
 # create the new project
-if [ "$#" -ne 1 ]
-then
+if [ "$#" -ne 1 ]; then
   echo "Usage: sh restart_project.sh <project name>"
   exit 1
 fi
@@ -14,7 +13,7 @@ find app/* -not -name requirements.txt -delete
 # create a django project inside web container
 echo 'Executing django-admin startproject inside the container...'
 docker-compose exec web django-admin startproject $1 .
-sudo chown -R ${USER:=$(/usr/bin/id -run)}:$USER app/
+chown -R ${USER:=$(/usr/bin/id -run)}:$USER app/
 
 # replace all ocurrencies of old name
 echo 'Replaceing all ocurrencies of the old project...'
