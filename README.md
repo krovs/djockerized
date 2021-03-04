@@ -13,8 +13,7 @@ Everything default but Postgres
     $ docker-compose up --build
     ```
 
-    The dev server will be available on [http://localhost:8000](http://localhost:8000) 
-
+    The dev server will be available on [http://localhost:8000](http://localhost:8000)
 
 #### Remake the project
 
@@ -40,5 +39,5 @@ Postgres + gunicorn + nginx.
     $ docker-compose -f docker-compose.prod.yml up --build
     ```
 
-    The production server will be available on [http://localhost:1337](http://localhost:1337). 
+    The production server will be available on [http://localhost:1337](http://localhost:1337).  
     There is no bind mounts here, only volumes, so for any changes in the code to take effect, the container must be rebuilt.
